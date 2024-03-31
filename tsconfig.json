@@ -18,13 +18,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/images/*": ["public/images/*"],
+      "@/icons/*": ["public/icons/*"]
+    }
   },
-  "include": ["src"],
-  "paths": {
-    "@/*": ["./src/*"],
-    "@/images/*": ["public/images/*"],
-    "@/icons/*": ["public/icons/*"]
-  },
+  "include": ["src", "**/*.ts", "**/*.tsx"],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
