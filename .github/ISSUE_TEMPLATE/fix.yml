@@ -1,0 +1,13 @@
+name: "🐛 Fix"
+description: "버그 수정"
+title: "[Fix] "
+labels: "Fix"
+
+body:
+  - type: textarea
+    attributes:
+      label: 🐛 어떤 오류인가요?
+      description: 오류에 대해 설명해주세요.
+      placeholder: 오류에 대해서 적어주세요.
+    validations:
+      required: true

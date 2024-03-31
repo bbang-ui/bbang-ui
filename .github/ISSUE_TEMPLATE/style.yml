@@ -1,0 +1,13 @@
+name: "🎨 Style"
+description: "스타일 변경"
+title: "[Style] "
+labels: "Style"
+
+body:
+  - type: textarea
+    attributes:
+      label: 🎨 어떤 스타일인가요?
+      description: 스타일에 대해 설명해주세요.
+      placeholder: 스타일에 대해서 적어주세요.
+    validations:
+      required: true
