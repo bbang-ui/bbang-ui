@@ -1,0 +1,13 @@
+name: "🩹 Refactor"
+description: "리팩토링"
+title: "[Refactor] "
+labels: "Refactor"
+
+body:
+  - type: textarea
+    attributes:
+      label: 🩹 어떤 리팩토링인가요?
+      description: 리팩토링에 대해 설명해주세요.
+      placeholder: 리팩토링에 대해서 적어주세요.
+    validations:
+      required: true
