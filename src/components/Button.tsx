@@ -4,13 +4,13 @@ import styled from '@emotion/styled';
 
 function Button({
   type = 'button',
-  action,
+  onClick,
   isDisabled = true,
   children,
   ...props
 }: ButtonProps) {
   return (
-    <Wrapper type={type} onClick={action} disabled={isDisabled} {...props}>
+    <Wrapper type={type} onClick={onClick} disabled={isDisabled} {...props}>
       {children}
     </Wrapper>
   );
@@ -28,7 +28,7 @@ const Wrapper = styled.button<ButtonProps>`
       case 'lg':
         return 100;
       default:
-        return size;
+        return 80;
     }
   }}px;
   height: ${({ size = 'md' }) => {
@@ -40,7 +40,7 @@ const Wrapper = styled.button<ButtonProps>`
       case 'lg':
         return 50;
       default:
-        return Math.round(size / 4);
+        return 40;
     }
   }}px;
 

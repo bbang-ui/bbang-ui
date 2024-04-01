@@ -7,7 +7,7 @@ interface ButtonProps extends DefaultProps {
   size?: 'sm' | 'md' | 'lg';
   colorTheme?: 'primary' | 'black' | 'white';
   variants?: 'none' | 'outline';
-  action?: () => void;
+  onClick?: () => void;
   isDisabled?: boolean;
 }
 
