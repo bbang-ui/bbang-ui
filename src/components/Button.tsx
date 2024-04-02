@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 function Button({
   type = 'button',
   onClick,
-  isDisabled = true,
+  isDisabled = false,
   children,
   ...props
 }: ButtonProps) {
@@ -63,14 +63,23 @@ const Wrapper = styled.button<ButtonProps>`
   }};
 
   border: unset;
-  border: 1px ${({ variants }) => (variants === 'none' ? 'none' : 'solid')};
+  border: 1px
+    ${({ variants = 'none' }) => (variants === 'none' ? 'none' : 'solid')};
   border-radius: 10px;
 
   font-size: 12px;
   font-weight: 600;
 
+  cursor: pointer;
+
   &:hover {
     transition: all 0.3s ease-in-out;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: none;
   }
 `;
