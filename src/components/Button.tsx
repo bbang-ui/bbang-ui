@@ -73,8 +73,9 @@ const Wrapper = styled.button<ButtonProps>`
   cursor: pointer;
 
   &:hover {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    color: ${COLORS.hoverText};
   }
 
   &:disabled {

@@ -3,6 +3,7 @@ const COLORS = {
   primary: '#F0E7DB',
   black: '#000',
   white: '#FFF',
+  hoverText: '#303134',
 
   // 빵빵이 색상
   skin: '#F5DDC2',
