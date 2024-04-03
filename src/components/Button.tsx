@@ -67,7 +67,7 @@ const Wrapper = styled.button<ButtonProps>`
     ${({ variants = 'none' }) => (variants === 'none' ? 'none' : 'solid')};
   border-radius: 10px;
 
-  font-size: 12px;
+  font-size: ${({ fs = 12 }) => fs}px;
   font-weight: 600;
 
   cursor: pointer;

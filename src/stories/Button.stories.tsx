@@ -6,6 +6,7 @@ const meta = {
   args: {
     type: 'button',
     size: 'md',
+    fs: 12,
     colorTheme: 'primary',
     variants: 'none',
     isDisabled: false,
