@@ -10,7 +10,7 @@ interface DefaultProps {
 type SizeToken = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
 type ActiveState = 'disabled' | 'default' | 'hover';
 type ShadowToken = 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
-type ColorToken = 'transparent' | 'black' | 'white';
+type ColorToken = 'primary' | 'black' | 'white';
 type FontSizeToken =
   | '3sx'
   | '2xs'
