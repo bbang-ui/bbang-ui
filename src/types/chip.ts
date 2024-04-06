@@ -1,21 +1,22 @@
 import { ReactNode } from 'react';
 
-import { ActiveState, DefaultProps } from '@/types/default';
-
-export type ChipVariant = 'contained' | 'outlined';
-export type ChipSize = 'sm' | 'md' | 'lg';
+import {
+  ActiveState,
+  ColorToken,
+  DefaultProps,
+  SizeToken,
+} from '@/types/default';
 
 interface ChipProps extends DefaultProps {
   label?: string;
-  variant?: ChipVariant;
-  size?: ChipSize;
-  colorTheme?: string;
+  size?: Exclude<SizeToken, 'xl' | '2xl' | '3xl'>;
+  colorTheme?: ColorToken;
   borderRadius?: string;
-  onClick?: () => void;
-  isDisabled?: boolean;
   children?: ReactNode;
   active?: ActiveState;
-  fontSize: string;
+  fontSize: number;
+  onClick?: () => void;
+  isDisabled?: boolean;
 }
 
 export type { ChipProps };
