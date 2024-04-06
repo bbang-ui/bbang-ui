@@ -7,4 +7,31 @@ interface DefaultProps {
   children?: ReactNode;
 }
 
-export type { DefaultProps };
+type SizeToken = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+type ActiveState = 'disabled' | 'default' | 'hover';
+type ShadowToken = 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+type ColorToken = 'transparent' | 'black' | 'white';
+type FontSizeToken =
+  | '3sx'
+  | '2xs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | '3xl'
+  | '4xl'
+  | '5xl'
+  | '6xl'
+  | '7xl'
+  | '8xl';
+
+export type {
+  DefaultProps,
+  ActiveState,
+  FontSizeToken,
+  ColorToken,
+  ShadowToken,
+  SizeToken,
+};
