@@ -1,4 +1,4 @@
-import COLORS from '@/styles/color';
+import { COLORS } from '@/styles/color';
 import { ButtonProps } from '@/types/button';
 import styled from '@emotion/styled';
 
