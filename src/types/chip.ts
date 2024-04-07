@@ -14,7 +14,7 @@ interface ChipProps extends DefaultProps {
   borderRadius?: string;
   children?: ReactNode;
   active?: ActiveState;
-  fontSize: number;
+  fontSize?: number;
   onClick?: () => void;
   isDisabled?: boolean;
 }
