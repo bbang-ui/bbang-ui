@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { COLORS, DARK_MODE_COLORS } from '@/styles/color';
+import { COLORS } from '@/styles/color';
 import { ChipProps } from '@/types/chip';
 import { forwardRef, useState } from 'react';
 
@@ -54,35 +54,56 @@ const Wrapper = styled.button<ChipProps>`
   padding: '8px 16px 8px 32px';
   border-radius: 100em;
 
-  ${({ colorTheme = 'primary' }) => {
-    return `
-      background-color: ${COLORS.white};
-      color: ${DARK_MODE_COLORS[colorTheme]};
-    `;
-  }}
-
   ${({ size = 'sm' }) => {
     const { width, height } = SIZE_MAP[size];
     return `
       width: ${width}px;
       height: ${height}px;
-      
     `;
   }}
 
+  background-color: ${({ colorTheme = COLORS.white, active }) => {
+    switch (colorTheme) {
+      case 'primary':
+        if (active) return COLORS.skin;
+        return COLORS.primary;
+      case 'black':
+        if (active) return COLORS.black;
+        return COLORS.black_sub;
+      case 'white':
+        if (active) return COLORS.primary;
+        return COLORS.white;
+      default:
+        return colorTheme;
+    }
+  }};
 
+  color: ${({ colorTheme = 'white' }) => {
+    return colorTheme === 'primary' || colorTheme === 'white'
+      ? COLORS.black
+      : COLORS.white;
+  }};
 
-&:disabled {
+  &:disabled {
     cursor: not-allowed;
     background-color: ${COLORS.disabled};
     background-image: none;
   }
 
-  ${({ active }) => active === true && `background-color:${COLORS.primary};`};
-
   &:hover:not(:disabled) {
     transition: all 0.15s ease-in-out;
-    background-color: ${COLORS.primary};
+    background-color: ${({ colorTheme }) => {
+      switch (colorTheme) {
+        case 'primary':
+          return COLORS.skin;
+        case 'black':
+          return COLORS.black_sub;
+        case 'white':
+          return COLORS.primary;
+        default:
+          return colorTheme;
+      }
+    }};
     transition: 0.4s;
     border-color: ${COLORS.black};
   }
