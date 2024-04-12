@@ -4,7 +4,7 @@ import { ColorToken, DefaultProps, SizeToken } from '@/types/default';
 
 interface ChipProps extends DefaultProps {
   label?: string;
-  size?: Exclude<SizeToken, 'xl' | '2xl' | '3xl'>;
+  size?: SizeToken;
   colorTheme?: ColorToken;
   borderRadius?: string;
   children?: ReactNode;
