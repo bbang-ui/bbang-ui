@@ -7,23 +7,8 @@ interface DefaultProps {
   children?: ReactNode;
 }
 
-type SizeToken = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+type SizeToken = 'xs' | 'sm' | 'md' | 'lg';
 type ShadowToken = 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
 type ColorToken = 'primary' | 'black' | 'white';
-type FontSizeToken =
-  | '3sx'
-  | '2xs'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | '2xl'
-  | '3xl'
-  | '4xl'
-  | '5xl'
-  | '6xl'
-  | '7xl'
-  | '8xl';
 
-export type { DefaultProps, FontSizeToken, ColorToken, ShadowToken, SizeToken };
+export type { DefaultProps, ColorToken, ShadowToken, SizeToken };
