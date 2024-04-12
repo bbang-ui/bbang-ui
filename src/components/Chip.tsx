@@ -49,7 +49,7 @@ const Wrapper = styled.button<ChipProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #eee;
+  border: 1px solid ${COLORS.disabled};
   font-size: ${({ fontSize = 12 }) => fontSize}px;
   padding: '8px 16px 8px 32px';
   border-radius: 100em;
