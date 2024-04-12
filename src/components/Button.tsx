@@ -75,7 +75,7 @@ const Wrapper = styled.button<ButtonProps>`
   &:hover {
     transition: all 0.15s ease-in-out;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-    box-shadow: 1.5px 1.5px 1.5px 1.5px ${COLORS.hover};
+    box-shadow: 1.5px 1.5px 1.5px 1.5px ${COLORS.gray};
     color: ${COLORS.hoverText};
   }
 

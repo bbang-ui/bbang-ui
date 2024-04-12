@@ -3,7 +3,7 @@ export const COLORS = {
   primary: '#F0E7DB',
   black: '#000',
   white: '#FFF',
-  hover: '#818181',
+  gray: '#818181',
   hoverText: '#303134',
 
   // 빵빵이 색상
