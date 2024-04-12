@@ -1,11 +1,6 @@
 import { ReactNode } from 'react';
 
-import {
-  ActiveState,
-  ColorToken,
-  DefaultProps,
-  SizeToken,
-} from '@/types/default';
+import { ColorToken, DefaultProps, SizeToken } from '@/types/default';
 
 interface ChipProps extends DefaultProps {
   label?: string;
@@ -13,10 +8,10 @@ interface ChipProps extends DefaultProps {
   colorTheme?: ColorToken;
   borderRadius?: string;
   children?: ReactNode;
-  active?: ActiveState;
+  active?: boolean;
   fontSize?: number;
   onClick?: () => void;
-  isDisabled?: boolean;
+  disabled?: boolean;
 }
 
 export type { ChipProps };

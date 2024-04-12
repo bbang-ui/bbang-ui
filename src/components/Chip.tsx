@@ -2,52 +2,46 @@ import styled from '@emotion/styled';
 
 import { COLORS, DARK_MODE_COLORS } from '@/styles/color';
 import { ChipProps } from '@/types/chip';
+import { forwardRef, useState } from 'react';
 
 const SIZE_MAP = {
   xs: {
     width: 50,
-    height: 20,
-    padding: '0px 4px',
-    borderRadius: 10,
+    height: 18,
   },
   sm: {
-    width: 100,
-    height: 30,
-    padding: '0px 8px',
-    borderRadius: 10,
+    width: 60,
+    height: 24,
   },
   md: {
-    width: 150,
-    height: 40,
-    padding: '0px 12px',
-    borderRadius: 20,
+    width: 90,
+    height: 28,
   },
   lg: {
-    width: 200,
-    height: 50,
-    padding: '0px 16px',
-    borderRadius: 30,
+    width: 100,
+    height: 32,
   },
 };
 
-function Chip({
-  onClick,
-  isDisabled = false,
-  label,
-  children,
-  ...props
-}: ChipProps) {
-  return (
-    <Wrapper
-      onClick={onClick}
-      disabled={isDisabled}
-      arial-label={label ?? 'chip'}
-      {...props}
-    >
-      {children}
-    </Wrapper>
-  );
-}
+const Chip = forwardRef(
+  ({ onClick, label, children, disabled, ...props }: ChipProps) => {
+    const [isSelected, setIsSelected] = useState(false);
+    return (
+      <Wrapper
+        active={isSelected}
+        onClick={() => {
+          setIsSelected((prev) => !prev);
+          onClick?.();
+        }}
+        disabled={disabled}
+        arial-label={label ?? 'chip'}
+        {...props}
+      >
+        {children}
+      </Wrapper>
+    );
+  },
+);
 
 export default Chip;
 
@@ -55,38 +49,41 @@ const Wrapper = styled.button<ChipProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
-  cursor: pointer;
+  border: 1px solid #eee;
   font-size: ${({ fontSize = 12 }) => fontSize}px;
+  padding: '8px 16px 8px 32px';
+  border-radius: 100em;
 
   ${({ colorTheme = 'primary' }) => {
     return `
-    
-      background-color: ${COLORS[colorTheme]};
+      background-color: ${COLORS.white};
       color: ${DARK_MODE_COLORS[colorTheme]};
     `;
   }}
 
   ${({ size = 'sm' }) => {
-    const { width, height, padding, borderRadius } = SIZE_MAP[size];
+    const { width, height } = SIZE_MAP[size];
     return `
       width: ${width}px;
       height: ${height}px;
-      padding: ${padding};
-      border-radius: ${borderRadius}px;
+      
     `;
   }}
 
 
-  &:hover {
-    transition: all 0.15s ease-in-out;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-    box-shadow: 0.2px 0.2px 0.2px 0.2px ${COLORS.hover};
+
+&:disabled {
+    cursor: not-allowed;
+    background-color: ${COLORS.disabled};
+    background-image: none;
   }
 
-  &:disabled {
-    cursor: not-allowed;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: none;
+  ${({ active }) => active === true && `background-color:${COLORS.primary};`};
+
+  &:hover:not(:disabled) {
+    transition: all 0.15s ease-in-out;
+    background-color: ${COLORS.primary};
+    transition: 0.4s;
+    border-color: ${COLORS.black};
   }
 `;
