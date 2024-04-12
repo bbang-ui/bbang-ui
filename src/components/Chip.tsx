@@ -52,7 +52,7 @@ const Wrapper = styled.button<ChipProps>`
   border: 1px solid ${COLORS.disabled};
   font-size: ${({ fontSize = 12 }) => fontSize}px;
   padding: '8px 16px 8px 32px';
-  border-radius: 100em;
+  border-radius: 100rem;
 
   ${({ size = 'sm' }) => {
     const { width, height } = SIZE_MAP[size];
