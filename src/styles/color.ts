@@ -5,6 +5,7 @@ export const COLORS = {
   white: '#FFF',
   gray: '#818181',
   hoverText: '#303134',
+  disabled: '#eeeeee',
 
   // 빵빵이 색상
   skin: '#F5DDC2',
