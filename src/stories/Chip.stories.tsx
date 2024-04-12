@@ -6,7 +6,6 @@ const meta = {
   args: {
     size: 'md',
     colorTheme: 'primary',
-    isDisabled: false,
   },
   component: Chip,
 };
