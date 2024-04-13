@@ -7,4 +7,8 @@ interface DefaultProps {
   children?: ReactNode;
 }
 
-export type { DefaultProps };
+type SizeToken = 'xs' | 'sm' | 'md' | 'lg';
+type ShadowToken = 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+type ColorToken = 'primary' | 'black' | 'white';
+
+export type { DefaultProps, ColorToken, ShadowToken, SizeToken };
