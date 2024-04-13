@@ -6,7 +6,7 @@ interface SpinnerProps extends DefaultProps {
   thickness?: number;
   color?: string;
   bgColor?: string;
-  speed?: string;
+  speed?: number;
   children?: ReactNode;
 }
 

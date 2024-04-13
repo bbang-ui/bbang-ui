@@ -56,5 +56,5 @@ const Wrapper = styled.div<SpinnerProps>`
   border-left-color: ${bgColor};
   border-radius: 100%;`;
   }}
-  animation: ${rotate} ${({ speed = '1' }) => speed}s infinite linear;
+  animation: ${rotate} ${({ speed = 1 }) => speed}s infinite linear;
 `;
