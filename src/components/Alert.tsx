@@ -1,7 +1,7 @@
 import COLORS from '@/styles/color';
 import { AlertProps } from '@/types/alert';
 import AlertBgColor from '@/utils/Alert/AlertBgColor';
-import { default as AlertFillColor } from '@/utils/Alert/AlertFillColor';
+import AlertFillColor from '@/utils/Alert/AlertFillColor';
 
 import { keyframes } from '@emotion/react';
 
