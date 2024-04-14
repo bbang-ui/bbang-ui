@@ -1,5 +1,5 @@
 import useBoolean from '@/hooks/useBoolean';
-import COLORS from '@/styles/color';
+import { COLORS } from '@/styles/color';
 import SwitchProps from '@/types/switch';
 import styled from '@emotion/styled';
 
