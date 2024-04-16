@@ -1,18 +1,19 @@
 import { SizeToken } from '@/types/default';
 import { ReactNode } from 'react';
 
-interface SizeProps {
+interface DefaultAvatarProps {
   size?: SizeToken;
-}
-
-interface AvatarProps extends SizeProps {
-  name?: string;
-  src?: string;
-}
-
-interface AvatarGroupProps extends SizeProps {
   max?: number;
-  space?: string;
+}
+
+interface AvatarProps extends DefaultAvatarProps {
+  index?: number;
+  name?: string;
+  imgUrl?: string;
+}
+
+interface AvatarGroupProps extends DefaultAvatarProps {
+  space?: number;
   children?: ReactNode;
 }
 
