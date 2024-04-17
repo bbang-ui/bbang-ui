@@ -47,13 +47,13 @@ const Wrapper = styled.div<SpinnerProps>`
     children,
     thickness = 2,
     color = COLORS.black,
-    bgColor = 'transparent',
+    emptyColor = 'transparent',
   }) => {
     return children
       ? ``
       : `border: ${thickness}px solid
     ${color};
-  border-left-color: ${bgColor};
+  border-left-color: ${emptyColor};
   border-radius: 100%;`;
   }}
   animation: ${rotate} ${({ speed = 1 }) => speed}s infinite linear;

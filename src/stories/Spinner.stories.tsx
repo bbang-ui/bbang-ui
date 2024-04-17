@@ -1,6 +1,6 @@
 import Spinner from '@/components/Spinner';
 import { COLORS } from '@/styles/color';
-import SwitchProps from '@/types/switch';
+import { SwitchProps } from '@/types/switch';
 
 const meta = {
   title: 'Spinner',
@@ -8,7 +8,7 @@ const meta = {
     size: 'sm',
     thickness: '2',
     color: COLORS.black,
-    bgColor: 'transparent',
+    emptyColor: 'transparent',
     speed: '1',
   },
   component: Spinner,

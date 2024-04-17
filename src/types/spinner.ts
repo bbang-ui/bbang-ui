@@ -5,7 +5,7 @@ interface SpinnerProps extends DefaultProps {
   size?: SizeToken;
   thickness?: number;
   color?: string;
-  bgColor?: string;
+  emptyColor?: string;
   speed?: number;
   children?: ReactNode;
 }
