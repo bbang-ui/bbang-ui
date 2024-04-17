@@ -50,8 +50,8 @@ const Wrapper = styled.div<AvatarGroupProps>`
 `;
 
 const CountAvatar = styled.div<AvatarGroupProps & { countNumber: number }>`
-  width: ${({ size = 'md' }) => SIZE_MAP[size] - 2}px;
-  height: ${({ size = 'md' }) => SIZE_MAP[size] - 2}px;
+  width: ${({ size = 'md' }) => SIZE_MAP[size] + 1}px;
+  height: ${({ size = 'md' }) => SIZE_MAP[size] + 1}px;
   display: flex;
   justify-content: center;
   align-items: center;
