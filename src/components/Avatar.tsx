@@ -6,7 +6,11 @@ import defaultImg from '../../public/images/default_avatar.png';
 function Avatar({ index, max, name, imgUrl, ...props }: AvatarProps) {
   return (
     <Wrapper index={index} max={max}>
-      <Image src={imgUrl ?? defaultImg} alt={name} {...props} />
+      <Image
+        src={imgUrl ?? defaultImg}
+        alt={name ?? '기본 이미지'}
+        {...props}
+      />
     </Wrapper>
   );
 }
