@@ -31,7 +31,7 @@ function AvatarGroup({ size, max, children, ...props }: AvatarGroupProps) {
 
   return (
     <Wrapper {...props}>
-      {max && (
+      {max && cloneChildren.length - max > 0 && (
         <CountAvatar size={size} countNumber={countNumber}>
           +{cloneChildren.length - max}
         </CountAvatar>
