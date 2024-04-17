@@ -1,7 +1,7 @@
 import { SIZE_MAP } from '@/constants/avatarSizeMap';
 import { AvatarProps } from '@/types/avatar';
 import styled from '@emotion/styled';
-import defaultImg from '../../public/images/default_avatar.png';
+import defaultImg from '../../public/images/default_avatar.webp';
 
 function Avatar({ index, max, name, imgUrl, ...props }: AvatarProps) {
   return (
