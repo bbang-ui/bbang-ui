@@ -1,4 +1,4 @@
-import COLORS from '@/styles/color';
+import { COLORS } from '@/styles/color';
 import { AlertProps } from '@/types/alert';
 import AlertBgColor from '@/utils/Alert/AlertBgColor';
 import AlertFillColor from '@/utils/Alert/AlertFillColor';
