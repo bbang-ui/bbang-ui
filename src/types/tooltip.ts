@@ -1,12 +1,12 @@
 import { DefaultProps } from '@/types/default';
-import { LegacyRef, ReactNode } from 'react';
+import { RefObject, ReactNode } from 'react';
 
-type PlacementType = 'top' | 'bottom' | 'left' | 'right';
+export type DirectionType = 'top' | 'right' | 'bottom' | 'left';
 
 interface TooltipProps extends DefaultProps {
-  ref?: LegacyRef<HTMLSpanElement>;
+  ref?: RefObject<HTMLSpanElement>;
   label?: string;
-  direction?: PlacementType;
+  placement?: DirectionType;
   disable?: string;
   hasArrow?: boolean;
   message: string | ReactNode;
