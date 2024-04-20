@@ -7,4 +7,4 @@ interface SwitchProps extends DefaultProps {
   isDisabled?: boolean;
 }
 
-export default SwitchProps;
+export type { SwitchProps };
