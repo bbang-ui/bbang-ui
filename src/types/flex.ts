@@ -30,7 +30,7 @@ interface FlexProps extends DefaultProps {
   grow?: number;
   shrink?: number;
   basis?: string;
-  gap?: number;
+  gap?: number | string;
 }
 
 export type { FlexProps };
