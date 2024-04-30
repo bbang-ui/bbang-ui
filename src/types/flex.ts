@@ -1,20 +1,20 @@
 import { DefaultProps } from '@/types/default';
 
-type JustifyContentToken =
+export type JustifyContentToken =
   | 'center'
-  | 'flex-end'
-  | 'flex-start'
-  | 'space-around'
-  | 'space-between'
-  | 'space-evenly'
+  | 'end'
+  | 'start'
+  | 'around'
+  | 'between'
+  | 'evenly'
   | 'stretch'
   | 'normal';
 
-type AlignItemsToken =
+export type AlignItemsToken =
   | 'baseline'
   | 'center'
-  | 'flex-end'
-  | 'flex-start'
+  | 'end'
+  | 'start'
   | 'stretch'
   | 'normal';
 
