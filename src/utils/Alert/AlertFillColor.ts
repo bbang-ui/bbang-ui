@@ -1,4 +1,4 @@
-import COLORS from '@/styles/color';
+import { COLORS } from '@/styles/color';
 import { AlertProps } from '@/types/alert';
 
 function AlertFillColor({ status }: AlertProps) {
