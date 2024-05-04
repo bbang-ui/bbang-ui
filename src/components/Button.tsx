@@ -44,22 +44,22 @@ const Wrapper = styled.button<ButtonProps>`
     }
   }}px;
 
-  background-color: ${({ colorTheme = COLORS.primary }) => {
+  background-color: ${({ colorTheme = COLORS.PRIMARY }) => {
     switch (colorTheme) {
       case 'primary':
-        return COLORS.primary;
+        return COLORS.PRIMARY;
       case 'black':
-        return COLORS.black;
+        return COLORS.BLACK;
       case 'white':
-        return COLORS.white;
+        return COLORS.WHITE;
       default:
         return colorTheme;
     }
   }};
   color: ${({ colorTheme = 'white' }) => {
     return colorTheme === 'primary' || colorTheme === 'white'
-      ? COLORS.black
-      : COLORS.white;
+      ? COLORS.BLACK
+      : COLORS.WHITE;
   }};
 
   border: unset;
@@ -75,8 +75,8 @@ const Wrapper = styled.button<ButtonProps>`
   &:hover {
     transition: all 0.15s ease-in-out;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-    box-shadow: 1.5px 1.5px 1.5px 1.5px ${COLORS.gray};
-    color: ${COLORS.hoverText};
+    box-shadow: 1.5px 1.5px 1.5px 1.5px ${COLORS.GRAY};
+    color: ${COLORS.HOVER_TEXT};
   }
 
   &:disabled {

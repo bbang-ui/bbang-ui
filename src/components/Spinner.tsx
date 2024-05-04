@@ -46,7 +46,7 @@ const Wrapper = styled.div<SpinnerProps>`
   ${({
     children,
     thickness = 2,
-    color = COLORS.black,
+    color = COLORS.BLACK,
     emptyColor = 'transparent',
   }) => {
     return children

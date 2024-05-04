@@ -12,7 +12,7 @@ function AlertFillColor({ status }: AlertProps) {
     case 'info':
       return COLORS.FILL_INFO;
     default:
-      return COLORS.primary;
+      return COLORS.PRIMARY;
   }
 }
 
