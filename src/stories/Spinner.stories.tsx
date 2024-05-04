@@ -1,13 +1,13 @@
 import Spinner from '@/components/Spinner';
 import { COLORS } from '@/styles/color';
-import { SwitchProps } from '@/types/switch';
+import { SpinnerProps } from '@/types/spinner';
 
 const meta = {
   title: 'Spinner',
   args: {
     size: 'sm',
     thickness: '2',
-    color: COLORS.black,
+    color: COLORS.BLACK,
     emptyColor: 'transparent',
     speed: '1',
   },
@@ -16,7 +16,7 @@ const meta = {
 
 export default meta;
 
-function Component({ children, ...props }: SwitchProps) {
+function Component({ children, ...props }: SpinnerProps) {
   return <Spinner {...props}>{children}</Spinner>;
 }
 
