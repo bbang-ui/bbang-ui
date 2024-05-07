@@ -58,7 +58,7 @@ const Slider = styled.div<SwitchProps>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${COLORS.gray};
+  background-color: ${COLORS.GRAY};
   transition: 0.4s;
   border-radius: 40px;
 
@@ -112,9 +112,9 @@ const Slider = styled.div<SwitchProps>`
     background-color: ${({ theme }) => {
       switch (theme) {
         case 'primary':
-          return COLORS.skin;
+          return COLORS.SKIN;
         case 'black':
-          return COLORS.white;
+          return COLORS.WHITE;
       }
     }};
     transition: 0.4s;
@@ -140,9 +140,9 @@ const Slider = styled.div<SwitchProps>`
     background-color: ${({ theme }) => {
       switch (theme) {
         case 'primary':
-          return COLORS.tShirts;
+          return COLORS.T_SHIRTS;
         case 'black':
-          return COLORS.black;
+          return COLORS.BLACK;
       }
     }};
   }

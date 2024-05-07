@@ -1,4 +1,4 @@
-import COLORS from '@/styles/color';
+import { COLORS } from '@/styles/color';
 import { AlertProps } from '@/types/alert';
 import AlertBgColor from '@/utils/Alert/AlertBgColor';
 import AlertFillColor from '@/utils/Alert/AlertFillColor';
@@ -103,8 +103,8 @@ const AlertWrapper = styled.div<AlertProps & { isAnimation: boolean }>`
   background-color: ${({ status, variants }) =>
     AlertBgColor({ status, variants })};
   color: ${({ status, variants }) => {
-    if (!status) return COLORS.black;
-    if (variants === 'fill') return COLORS.white;
+    if (!status) return COLORS.BLACK;
+    if (variants === 'fill') return COLORS.WHITE;
     return AlertFillColor({ status });
   }};
 

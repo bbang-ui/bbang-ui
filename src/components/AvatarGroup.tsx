@@ -59,12 +59,12 @@ const CountAvatar = styled.div<AvatarGroupProps & { countNumber: number }>`
   position: absolute;
   left: ${({ countNumber }) => countNumber * 25}px;
 
-  /* border: 1px solid ${COLORS.black}; */
+  /* border: 1px solid ${COLORS.BLACK}; */
   border-radius: 9999px;
 
   // 추후 교체 필요
-  color: ${COLORS.tShirts};
-  background-color: ${COLORS.primary};
+  color: ${COLORS.T_SHIRTS};
+  background-color: ${COLORS.PRIMARY};
 
   z-index: ${({ countNumber }) => countNumber};
 `;

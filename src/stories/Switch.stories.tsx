@@ -1,5 +1,5 @@
 import Switch from '@/components/Switch';
-import SwitchProps from '@/types/switch';
+import { SwitchProps } from '@/types/switch';
 
 const meta = {
   title: 'Switch',
