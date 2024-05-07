@@ -5,7 +5,7 @@ const SM = 767;
 
 function useDeviceType() {
   const isTablet = useMediaQuery(
-    `(min-width: ${SM + 1}px) and (max-width: ${MD}px)`,
+    `(min-width: ${SM + 1}px) and (max-width: ${MD - 1}px)`,
   );
 
   const isMobile = useMediaQuery(`(max-width: ${SM}px)`);
