@@ -1,9 +1,10 @@
 import useClipBoard from '@/hooks/useClipBoard';
 import { COLORS } from '@/styles/color';
-import { CodeProps } from '@/types/code';
+import { PropsWithChildren } from '@/types/default';
+
 import styled from '@emotion/styled';
 
-function Code({ children }: CodeProps) {
+function Code({ children }: PropsWithChildren) {
   const { isCopy, onCopy } = useClipBoard(String(children));
 
   return (
@@ -22,7 +23,7 @@ function Code({ children }: CodeProps) {
 
 export default Code;
 
-const Wrapper = styled.div<CodeProps>`
+const Wrapper = styled.div<PropsWithChildren>`
   position: relative;
   width: fit-content;
   padding: 8px;
