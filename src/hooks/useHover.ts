@@ -1,8 +1,8 @@
 import { useEventListener } from '@/hooks/useEventListener';
-import type { RefObject } from 'react';
+import { ElementRef } from '@/types/default';
 import { useState } from 'react';
 
-function useHover(elementRef: RefObject<HTMLElement>) {
+function useHover(elementRef: ElementRef) {
   const [value, setValue] = useState(false);
 
   const handleMouseEnter = () => {
