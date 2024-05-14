@@ -5,12 +5,8 @@ import { useState } from 'react';
 function useHover(elementRef: ElementRef) {
   const [value, setValue] = useState(false);
 
-  const handleMouseEnter = () => {
-    setValue(true);
-  };
-  const handleMouseLeave = () => {
-    setValue(false);
-  };
+  const handleMouseEnter = () => setValue(true);
+  const handleMouseLeave = () => setValue(false);
 
   useEventListener('mouseenter', handleMouseEnter, elementRef);
   useEventListener('mouseleave', handleMouseLeave, elementRef);
