@@ -1,8 +1,8 @@
-type Options = Array<{ value: string; label: string }>;
+type Options = Array<{ index: string; value: string }>;
 
 type SelectProps = {
   value?: string | null;
-  options: Options | (() => Promise<Options>);
+  options: Options;
   onChange?: (value: string) => void;
 };
 

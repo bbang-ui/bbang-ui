@@ -10,7 +10,7 @@ import {
   useState,
 } from 'react';
 
-const EMPTY_VALUE = [{ label: 'No Options.', value: '404' }];
+const EMPTY_VALUE = [{ index: '404', value: 'No Options.' }];
 
 function AutoComplete(props: SelectProps) {
   const [item, setItem] = useState<Options>([]);
@@ -55,12 +55,6 @@ function AutoComplete(props: SelectProps) {
       const optionsList = options.map((val) => val);
       setItem(optionsList);
     }
-    if (typeof options === 'function') {
-      options().then((data) => {
-        const optionsList = data.map((val) => val);
-        setItem(optionsList);
-      });
-    }
   };
 
   /**
@@ -94,22 +88,11 @@ function AutoComplete(props: SelectProps) {
 
     if (Array.isArray(options)) {
       const filterItem = options.filter((val) =>
-        val.label.toLowerCase().includes(e.target.value.toLowerCase()),
+        val.value.toLowerCase().includes(e.target.value.toLowerCase()),
       );
       if (!filterItem.length) return setItem(EMPTY_VALUE);
       setItem(filterItem);
       setIsOpen(true);
-    }
-
-    if (typeof options === 'function') {
-      options().then((data) => {
-        const filterItem = data.filter((val) =>
-          val.label.toLowerCase().includes(e.target.value.toLowerCase()),
-        );
-        if (!filterItem.length) return setItem(EMPTY_VALUE);
-        setItem(filterItem);
-        setIsOpen(true);
-      });
     }
   };
 
@@ -137,7 +120,7 @@ function AutoComplete(props: SelectProps) {
       case 'Enter':
         e.preventDefault();
         if (selectedIndex !== -1 && item) {
-          handleSelect(item[selectedIndex].label, selectedIndex);
+          handleSelect(item[selectedIndex].value, selectedIndex);
         }
         break;
       case 'Escape':
@@ -177,7 +160,7 @@ function AutoComplete(props: SelectProps) {
   const getLongestTextWidth = useCallback((options: Options) => {
     let maxWidth = 0;
     for (let option of options) {
-      const textWidth = getTextWidth(option.label);
+      const textWidth = getTextWidth(option.value);
       maxWidth = Math.max(maxWidth, textWidth);
     }
     return Math.ceil(maxWidth) + 46;
@@ -188,12 +171,6 @@ function AutoComplete(props: SelectProps) {
     if (Array.isArray(options)) {
       const optionsList = options.map((val) => val);
       setItem(optionsList);
-    }
-    if (typeof options === 'function') {
-      options().then((data) => {
-        const optionsList = data.map((val) => val);
-        setItem(optionsList);
-      });
     }
   }, [options]);
 
@@ -285,9 +262,9 @@ function AutoComplete(props: SelectProps) {
               index={index}
               selectedIndex={selectedIndex}
               prevSelectedIndex={prevSelectedIndex}
-              onMouseDown={(e) => handleSelect(val.label, index, e)}
+              onMouseDown={(e) => handleSelect(val.value, index, e)}
             >
-              {val.label}
+              {val.value}
             </Item>
           ))}
         </Items>
