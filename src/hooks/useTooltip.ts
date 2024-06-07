@@ -9,7 +9,7 @@ function useTooltip(props: useTooltipsProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
 
-  const toolTipElement = document.getElementById('toolTip') as HTMLElement;
+  const toolTipElement = document.body;
 
   const {
     content = 'Tooltip box',
